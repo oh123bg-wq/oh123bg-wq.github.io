@@ -1,0 +1,158 @@
+body {
+    color: white;
+    height: 100vh;
+    background: #1291db;
+    background: linear-gradient(90deg, rgba(18, 145, 219, 1) 0%, rgba(27, 27, 179, 1) 24%, rgba(25, 16, 156, 1) 37%, rgba(27, 27, 179, 1) 55%, rgba(18, 145, 219, 1) 100%);
+    background-size: 250% 250%;
+    animation: gradientMove 6s ease infinite alternate;
+}
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+.hero {
+    padding-top: 500px;
+    padding: 400px;
+}
+.hero h1 {
+    font-size: 100px;
+}
+
+/* make it more nice and more easy to see when someone hover it */
+.nav-link:hover {
+    text-shadow: 0 0 10px #ffffff;
+}
+
+/* make the word become white other than grey color */
+.nav-link {
+    color: white;
+}
+
+.cover-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 8px;
+    color: white;
+}
+#About-Me p {
+    font-size: 50px;
+}
+
+/* Timeline main edit */
+.timeline {
+    color: black;
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* The center line*/
+.timeline::after {
+    /* this content is to display the line very important */
+    content: "";
+    position: absolute;
+    width: 4px;
+    /* make the line look a bit transparent */
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* the container */
+.container1 {
+    padding: 10px 20px;
+    position: relative;
+    width: 50%;
+}
+
+/* the small dot */
+.container1::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #fff;
+    border: 4px solid #764ba2;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+.right {
+    left: 50%;
+}
+
+.right::after {
+    left: -10px;
+}
+
+.content {
+    padding: 20px;
+    /* half(0.85) transparent */
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.content h2 {
+    margin-top: 0;
+    color: #764ba2;
+}
+
+.content:hover {
+    /* make it go up a bit */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* responsive layout */
+@media screen and (max-width: 768px) {
+    /* Move the middle vertical line to left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Make the container fill the full width and leave padding for the left side */
+    .container1 {
+        width: 100% !important;
+        padding-left: 70px !important;
+        padding-right: 25px !important;
+        left: 0 !important;
+    }
+
+    /* Move the small dot to left */
+    .container1::after {
+        left: 21px !important;
+        right: auto !important;
+    }
+
+    /* arrange the container */
+    .content .d-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content img {
+        width: 100% !important;
+        max-width: 250px;
+        margin-bottom: 15px;
+    }
+}

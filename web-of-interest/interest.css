@@ -1,0 +1,115 @@
+/* Changes the font of all the text inside the website */
+* {
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+.dynapuff-a {
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.herobgimg {
+    background-image: url("https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/go/pokestop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutbgimg {
+    background-image: url("https://wallpaper-house.com/data/out/7/wallpaper2you_187118.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+.tv-seriesbgimg {
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/2025/07/High-resolution-Pokemon-backgrounds-for-desktop-illustrating-a-serene-lakeside-with-Pokemon-relaxing-by-the-water.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.charactersbgimg {
+    background-image: url("https://www.pokemon.com/static-assets/content-assets/cms2/img/misc/virtual-backgrounds/masters/city.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Transparent Box */
+.cover-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 8px;
+    color: white;
+}
+
+.about-box-color {
+    background: #0db6e0;
+    background: linear-gradient(90deg, rgba(13, 182, 224, 1) 0%, rgba(9, 191, 232, 1) 40%, rgba(255, 242, 0, 1) 100%);
+}
+
+/* enforces the image to not stretch outside the box, and fit inside the box */
+.character-img {
+    overflow: hidden;
+    height: 350px;
+    object-fit: cover;
+}
+
+.contact-bg {
+    background: #0e0f0f;
+    background: linear-gradient(180deg, rgba(14, 15, 15, 1) 0%, rgba(52, 66, 133, 1) 53%, rgba(0, 0, 0, 1) 100%);
+}
+
+.tv-box {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.tv-series-img {
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 25px;
+}
+.item-container {
+    position: relative;
+    width: 100%;
+    /* Ensure the mask and rounded corners do not extend beyond the container */
+    overflow: hidden;
+    border-radius: 10px;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    /* half transparent */
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+
+    opacity: 0;
+    font-size: 14px;
+    padding: 15px;
+    text-align: center;
+}
+.item-container:hover .overlay {
+    opacity: 1;
+}
+
+.item-container:hover .tv-series-img {
+    transition: 0.3s ease;
+    transform: scale(1.4);
+}
