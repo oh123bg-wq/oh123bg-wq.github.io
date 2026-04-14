@@ -156,3 +156,6 @@ body {
         margin-bottom: 15px;
     }
 }
+.timeline a{
+    width: 100px;
+}
